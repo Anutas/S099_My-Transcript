@@ -57,7 +57,6 @@ namespace S099_My_Transcript
             this.label1.TabIndex = 0;
             this.label1.Text = "My university name";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -109,7 +108,6 @@ namespace S099_My_Transcript
             this.label4.Size = new System.Drawing.Size(94, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Course Name";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -128,8 +126,6 @@ namespace S099_My_Transcript
             this.label6.Size = new System.Drawing.Size(48, 17);
             this.label6.TabIndex = 3;
             this.label6.Text = "Grade";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
             // textBoxCourseID
             // 
             this.textBoxCourseID.Location = new System.Drawing.Point(107, 17);
