@@ -12,10 +12,26 @@ namespace S099_My_Transcript
 { public partial class Form1 : Form
     {
         List<Course> year1Sem1;
+        List<Course> year1Sem2;
+        List<Course> year2Sem1;
+        List<Course> year2Sem2;
+        List<Course> year3Sem1;
+        List<Course> year3Sem2;
+        List<Course> year4Sem1;
+        List<Course> year4Sem2;
+        List<Course> year4Sem3;
         public Form1()
         {
             InitializeComponent();
             year1Sem1 = new List<Course>();
+            year1Sem2 = new List<Course>();
+            year2Sem1 = new List<Course>();
+            year2Sem2 = new List<Course>();
+            year3Sem1 = new List<Course>();
+            year3Sem2 = new List<Course>();
+            year4Sem1 = new List<Course>();
+            year4Sem2 = new List<Course>();
+            year4Sem3 = new List<Course>();
         }
 
         private void AddGrade(object sender, EventArgs e)
@@ -26,8 +42,55 @@ namespace S099_My_Transcript
             newCourse.CourseCredit = textBoxCourseID.Text;
             newCourse.Grade = textBoxGrade.Text;
 
-            year1Sem1.Add(newCourse);
-            dataGridViewCourse.DataSource = year1Sem1;
+            switch (tabControl1.SelectedIndex)
+            {
+                case 0:
+                    dataGridViewY1S1.DataSource = null;
+                    year1Sem1.Add(newCourse);
+                    dataGridViewY1S1.DataSource = year1Sem1;
+                    break;
+                case 1:
+                    dataGridViewY1S2.DataSource = null;
+                    year1Sem2.Add(newCourse);
+                    dataGridViewY1S2.DataSource = year1Sem2;
+                    break;
+                case 2:
+                    dataGridViewY2S1.DataSource = null;
+                    year2Sem1.Add(newCourse);
+                    dataGridViewY2S1.DataSource = year2Sem1;
+                    break;
+                case 3:
+                    dataGridViewY2S2.DataSource = null;
+                    year2Sem2.Add(newCourse);
+                    dataGridViewY2S2.DataSource = year2Sem2;
+                    break;
+                case 4:
+                    dataGridViewY3S1.DataSource = null;
+                    year3Sem1.Add(newCourse);
+                    dataGridViewY3S1.DataSource = year3Sem1;
+                    break;
+                case 5:
+                    dataGridViewY3S2.DataSource = null;
+                    year3Sem2.Add(newCourse);
+                    dataGridViewY3S2.DataSource = year3Sem2;
+                    break;
+                case 6:
+                    dataGridViewY4S1.DataSource = null;
+                    year4Sem1.Add(newCourse);
+                    dataGridViewY4S1.DataSource = year4Sem1;
+                    break;
+                case 7:
+                    dataGridViewY4S2.DataSource = null;
+                    year4Sem2.Add(newCourse);
+                    dataGridViewY4S2.DataSource = year4Sem2;
+                    break;
+                case 8:
+                    dataGridViewY4S3.DataSource = null;
+                    year4Sem3.Add(newCourse);
+                    dataGridViewY4S3.DataSource = year4Sem3;
+                    break;
+            }
+
         }
     }
     class Course
